@@ -1,0 +1,5 @@
+Here is a markdown style link: [https://github.com/kramdown/parser-gfm](https://github.com/kramdown/parser-gfm)
+
+Here is a markdown style minimal link: <https://github.com/kramdown/parser-gfm>
+
+Here is a bare (gfm) link: https://github.com/kramdown/parser-gfm

@@ -1,0 +1,4 @@
+eval_gemfile '../../Gemfile'
+# gemspec path: '../../'
+
+gem 'rinku'

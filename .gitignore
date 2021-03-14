@@ -3,3 +3,4 @@ VERSION
 kramdown-parser-gfm.gemspec
 Gemfile
 Gemfile.lock
+test/gemfiles/*.lock

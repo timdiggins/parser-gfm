@@ -15,10 +15,19 @@ require 'tmpdir'
 
 Encoding.default_external = 'utf-8'
 
+WITH_RINKU = begin
+               require 'rinku'
+               true
+             rescue LoadError
+               false
+             end
+
 class TestFiles < Minitest::Test
 
   # Generate test methods for gfm-to-html conversion
-  Dir[__dir__ + '/testcases/**/*.text'].each do |text_file|
+  testcases_path = WITH_RINKU ? '/testcases_with_rinku/**/*.text' : '/testcases/**/*.text'
+
+  Dir[__dir__ + testcases_path].each do |text_file|
     basename = text_file.sub(/\.text$/, '')
 
     html_file = basename + '.html'

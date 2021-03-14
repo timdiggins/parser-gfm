@@ -10,6 +10,7 @@ Note: Until kramdown version 2.0.0 this parser was part of the kramdown distribu
 
 ```bash
 gem install kramdown-parser-gfm
+gem install rinku # to get optional autolinking functionality (see below)
 ```
 
 
@@ -45,6 +46,11 @@ In this case the correct GFM result is:
 
     <p>This <del>is a complex strike through *test ~~with nesting</del> involved* here~~.</p>
 
+### Autolinking of absolute URIs (bare links)
+
+GFM allows bare links with no markup to be converted into links (see https://github.github.com/gfm/#absolute-uri).
+In order to enable this functionality you need to install the optional dependency (rinku)[https://github.com/vmg/rinku].
+If this is installed, then the bare links will be converted.
 
 ### Options
 
@@ -87,6 +93,9 @@ provided rake tasks.
 
 Run `rake --tasks` to view a list of available tasks.
 
+To test the rinku functionality locally:
+
+    bundle exec  --gemfile=test/gemfiles/with_rinku.gemfile rake
 
 ## License
 
